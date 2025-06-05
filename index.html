@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graph Tools</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f3f5;
+      color: #333;
+    }
+    .navbar {
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem;
+    }
+    .button {
+      padding: 1rem 2rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 250px;
+    }
+    .button:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.03);
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">Graph Tools</div>
+  <div class="container" id="menu">
+    <div class="button" onclick="openGame('https://ubg98.github.io/Subway-Surfers/')">📈 Graph Utility A</div>
+    <div class="button" onclick="openGame('https://ubg98.github.io/Basketball-Stars/')">📊 Equation Visualizer B</div>
+  </div>
+  <iframe id="gameFrame"></iframe>
+
+  <script>
+    function openGame(url) {
+      document.getElementById("menu").style.display = "none";
+      const frame = document.getElementById("gameFrame");
+      frame.src = url;
+      frame.style.display = "block";
+    }
+  </script>
+</body>
+</html>
